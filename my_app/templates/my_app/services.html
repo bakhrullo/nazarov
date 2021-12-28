@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      {% load static %}
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>{{ title }}</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'my_app/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/vendors/lightbox/simpleLightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/vendors/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/vendors/animate-css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/vendors/popup/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/vendors/flaticon/flaticon.css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static 'my_app/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'my_app/css/responsive.css' %}">
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area" >
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light" >
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent" >
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">BOSH SAHIFA</a></li>
+
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FAN</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="{% url 'file1' %}">MARUZA</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file2' %}">AMALIYOT</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file3' %}">LABARATORIYA</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file4' %}">mustaqil talim</a></li>
+									</ul>
+								</li>
+
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ilmiy ishlar</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="{% url 'file5' %}">scopus</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file6' %}">oak</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file7' %}">konferensiya</a></li>
+									</ul>
+								</li>
+							<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SHAXSIY MA'LUMPTLARIM</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/ob.pdf' %}">OBYEKTIVKA</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/ilish.pdf' %}">ILMIY ISHLARIM</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/dipl.pdf' %}">DIPLOMLARIM</a></li>
+									</ul>
+								</li>
+								<li class="nav-item active"><a class="nav-link" href="{% static 'my_app/files/darsj.pdf' %}">MENING ISH GRAFIGIM</a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="box_1620">
+				<div class="banner_inner d-flex align-items-center">
+					<div class="container">
+						<div class="banner_content text-center">
+							<h2>{{ title }}</h2>
+							<div class="page_link">
+<!--								<a href="index.html">Home</a>-->
+<!--								<a href="services.html">Services</a>-->
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+
+<div class="col-lg-4 col-sm-6 mt-sm-30 typo-sec">
+	<div class="">
+		<ol class="ordered-list">
+			{% for f in files %}
+				<li><span><a href="/media/{{f}}" download>file{{f}}</a></span></li>
+			{% endfor %}
+		</ol>
+	</div>
+</div>
+
+
+        <!--================End Feature Area =================-->
+
+        
+        <!--================Footer Area =================-->
+ <footer class="footer_area p_120">
+        	<div class="container">
+        		<div class="row footer_inner">
+        			<div class="col-lg-5 col-sm-6">
+        				<aside class="f_widget ab_widget">
+        					<div class="f_title">
+        						<h3>MEN HAQIMDA</h3>
+        					</div>
+        					<p>Dunyoni yaxshlik sari ozgartrib...</p>
+        					<p><!-- Link back to Colorlib an't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Barcha huquqlar himoya qilingan | Bu sayt <a href="https://t.me/fatkhullaev_b">FATKHULLAEV_B</a> tomanidan qilindi
+        				</aside>
+        			</div>
+        			<div class="col-lg-5 col-sm-6">
+        				<aside class="f_widget news_widget">
+        					<div class="f_title">
+        						<h3>TAKLIFLAR UCHUN </h3>
+        					</div>
+        					<p>emailingizni qoldiring</p>
+        					<div id="mc_embed_signup">
+                                <form target="_blank" action="" method="get" class="subscribe_form relative">
+                                	<div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Email adresingizni kiriting" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
+                                    </div>
+                                    <div class="mt-10 info"></div>
+                                </form>
+                            </div>
+        				</aside>
+        			</div>
+        			<div class="col-lg-2">
+        				<aside class="f_widget social_widget">
+        					<div class="f_title">
+        						<h3>Meni kuztib boring</h3>
+        					</div>
+        					<p>men internetda</p>
+        					<ul class="list">
+        						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+        						<li><a href="#"><i class="fa fa-behance"></i></a></li>
+        					</ul>
+        				</aside>
+        			</div>
+        		</div>
+        	</div>
+        </footer>
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static 'my_app/js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'my_app/js/popper.js' %}"></script>
+        <script src="{% static 'my_app/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'my_app/js/stellar.js' %}"></script>
+        <script src="{% static 'my_app/vendors/lightbox/simpleLightbox.min.js' %}"></script>
+        <script src="{% static 'my_app/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'my_app/vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'my_app/vendors/isotope/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'my_app/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'my_app/vendors/popup/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'my_app/js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'my_app/vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'my_app/vendors/counter-up/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'my_app/js/mail-script.js' %}"></script>
+        <script src="{% static 'my_app/js/theme.js' %}"></script>
+    </body>
+</html>
