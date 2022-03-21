@@ -99,7 +99,7 @@ class KonfFileInline(admin.TabularInline):
 class KonfAdmin(admin.ModelAdmin):
     inlines = [KonfFileInline, ]
 
-
+admin.site.register(VisitNumber)
 admin.site.register(ScopPage, ScopAdmin)
 admin.site.register(KonfPage, KonfAdmin)
 admin.site.register(AmaPage, AmaAdmin)

@@ -14,5 +14,5 @@ urlpatterns = [
     path('files/4/', Mus.as_view(), name='file4'),
     path('files/5/', Scop.as_view(), name='file5'),
     path('files/6/', Oak.as_view(), name='file6'),
-    path('files/7/', Konf.as_view(), name='file7')
+    path('files/7/', Konf.as_view(), name='file7'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -3,8 +3,11 @@
     <head>
 		{% load static %}
 
+
+
         <!-- Required meta tags -->
         <meta charset="utf-8">
+		{% load i18n %}
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
         <title>O Nazarov</title>
@@ -22,23 +25,44 @@
         <!-- main css -->
         <link rel="stylesheet" href="{% static 'my_app/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'my_app/css/responsive.css' %}">
-	    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7W2XQPZ1M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M7W2XQPZ1M');
-</script>
     </head>
     <body>
-        
+
         <!--================Header Menu Area =================-->
         <header class="header_area" >
-            <div class="main_menu">
-            	<nav class="navbar navbar-expand-lg navbar-light" >
+			<div>
+				<ul class="word">
+					<li class="nav-item ">
+						<h2 class="word-heading">{% trans  "“ TOSHKENT IRRIGATSIYA VA QISHLOQ XO'JALIGINI MEXANIZATSIYALASH MUHANDISLARI INSTITUTI ” MILLIY TADQIQOT UNIVERSITETI" %}</h2>
+					</li>
+				</ul>
+			</div>
+			<div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container box_1620">
+						<div  style="color:white;marigin-right:40px; "><i class="fa fa-eye"></i><a href="">      </a>{{ eye }}</div>
+						<p style="color:white" >      &nbsp     &nbsp           &nbsp           &nbsp</p>
+						<form action="{% url 'set_language' %}" method="post">
+  {% csrf_token %}
+  <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+  <input name="language" type="hidden" value="en" />
+  <input type="submit" value="English" />
+</form>
+<form action="{% url 'set_language' %}" method="post">
+  {% csrf_token %}
+  <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+  <input name="language" type="hidden" value="ru" />
+  <input type="submit" value="Russian" />
+</form>
+<form action="{% url 'set_language' %}" method="post">
+  {% csrf_token %}
+  <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+  <input name="language" type="hidden" value="uz" />
+  <input type="submit" value="Uzbek" />
+</form>
+
+
+
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
@@ -48,47 +72,45 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent" >
 							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">BOSH SAHIFA</a></li>
-
+								<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">{% trans  "BOSH SAHIFA" %}</a></li>
 								<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FAN</a>
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "FAN" %}</a>
 									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="{% url 'file1' %}">MARUZA</a></li>
-										<li class="nav-item"><a class="nav-link" href="{% url 'file2' %}">AMALIYOT</a></li>
-										<li class="nav-item"><a class="nav-link" href="{% url 'file3' %}">LABARATORIYA</a></li>
-										<li class="nav-item"><a class="nav-link" href="{% url 'file4' %}">mustaqil talim</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file1' %}">{% trans  "MARUZA" %}</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file2' %}">{% trans  "AMALIYOT" %}</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file3' %}">{% trans  "LABARATORIYA" %}</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file4' %}">{% trans  "mustaqil talim" %}</a></li>
 									</ul>
 								</li>
 
 								<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ilmiy ishlar</a>
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans  "ilmiy ishlar" %}</a>
 									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="{% url 'file5' %}">scopus</a></li>
-										<li class="nav-item"><a class="nav-link" href="{% url 'file6' %}">oak</a></li>
-										<li class="nav-item"><a class="nav-link" href="{% url 'file7' %}">konferensiya</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file5' %}">{% trans  "scopus" %}</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file6' %}">{% trans  "oak" %}</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% url 'file7' %}">{% trans  "konferensiya" %}</a></li>
 									</ul>
 								</li>
 							<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SHAXSIY MA'LUMPTLARIM</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/ob.pdf' %}">OBYEKTIVKA</a></li>
-										<li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/ilish.pdf' %}">ILMIY ISHLARIM</a></li>
-										<li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/dipl.pdf' %}">DIPLOMLARIM</a></li>
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans  "SHAXSIY MA'LUMPTLARIM" %}</a>
+									<ul class="dropdown-menu"><li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/ob.pdf' %}">{% trans  "OBYEKTIVKA" %}</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/ilish.pdf' %}">{% trans  "ILMIY ISHLARIM" %}</a></li>
+										<li class="nav-item"><a class="nav-link" href="{% static 'my_app/files/dipl.pdf' %}">{% trans  "DIPLOMLARIM" %}</a></li>
 									</ul>
-								</li> 
-								<li class="nav-item active"><a class="nav-link" href="{% static 'my_app/files/darsj.pdf' %}">MENING ISH GRAFIGIM</a></li>
+								</li>
+								<li class="nav-item active"><a class="nav-link" href="{% static 'my_app/files/darsj.pdf' %}">{% trans  "MENING ISH GRAFIGIM" %}</a></li>
 							</ul>
-						</div> 
+						</div>
 					</div>
             	</nav>
             </div>
         </header>
         <!--================Header Menu Area =================-->
-        
+
         <!--================Home Banner Area =================-->
         <section class="home_banner_area" >
            	<div class="container box_1620" >
-           		<div class="banner_inner d-flex align-items-center">
+				<div class="banner_inner d-flex align-items-center">
 					<div class="banner_content">
 						<div class="media">
 							<div class="d-flex">
@@ -96,15 +118,14 @@
 							</div>
 							<div class="media-body">
 								<div class="personal_text">
-									<h6>Hammaga salom! Men</h6>
-									<h3>OYBREK NAZAROV</h3>
-									<h4>Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash muhandislari insituti elektrotexnika va mexatronika kafedraci assistenti</h4>
-									<p>Dunyoni yaxshlik sari ozgartrib...</p>
+									<h2>{% trans  "ABDIRASULOVICH" %}</h2>
+									<h3>{% trans  "OYBEK NAZAROV" %}</h3>
+
 									<ul class="list basic_info">
 										<li><a href="#"><i class="lnr lnr-calendar-full"></i>03.02.1985</a></li>
 										<li><a href="#"><i class="lnr lnr-phone-handset"></i>+99890973439385</a></li>
-										<li><a href="#"><i class="lnr lnr-envelope"></i>oybeknazarov@gmail.com</a></li>
-										<li><a href="#"><i class="lnr lnr-home"></i>Qashqadaryo viloyati, Qamashi tumani</a></li>
+										<li><a href="#"><i class="lnr lnr-envelope"></i>oyek1985nazarov@gmail.com</a></li>
+										<li><a href="#"><i class="lnr lnr-home"></i>{% trans  "Qashqadaryo viloyati, Qamashi tumani" %}</a></li>
 									</ul>
 									<ul class="list personal_social">
 										<li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -119,32 +140,32 @@
             </div>
         </section>
         <!--================End Home Banner Area =================-->
-        
+
         <!--================Welcome Area =================-->
         <section class="welcome_area p_120">
         	<div class="container">
         		<div class="row welcome_inner">
         			<div class="col-lg-6">
         				<div class="welcome_text">
-        					<h4>MENING MEHNAT FAOLIYATIM</h4>
-        					<p>2007-2011 yy. – Toshkent irrigasiya va melioratsiya instituti talabasi
+        					<h4>{% trans  "MENING MEHNAT FAOLIYATIM" %}</h4>
+        					<p>{% trans  "2007-2011 yy. – Toshkent irrigasiya va melioratsiya instituti talabasi" %}
 								<br>
-								2012-2014 yy. – Toshkent irrigasiya va melioratsiya instituti magistranti
+								{% trans  "2012-2014 yy. – Toshkent irrigasiya va melioratsiya instituti magistranti" %}
 								<br>
-								2014-2015 yy. – Toshkent irrigasiya va melioratsiya instituti chizma geometriya va muhandislik grafikasi kafedrasi kabinet mudiri
+								{% trans  "2014-2015 yy. – Toshkent irrigasiya va melioratsiya instituti chizma geometriya va muhandislik grafikasi kafedrasi kabinet mudiri" %}
 								<br>
-								2015-2017 yy. – Toshkent irrigasiya va melioratsiya instituti elektrotekxnika va elektr yuritma kafedrasi assistent
+								{% trans  "2015-2017 yy. – Toshkent irrigasiya va melioratsiya instituti elektrotekxnika va elektr yuritma kafedrasi assistent" %}
 								<br>
-								2018-2019yy. – Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash muhandislari insituti elektrotexnika va mexatronika kafedrasi assistenti va qishloq va suv xo‘jalig energiya ta'minoti fakul'teti dekan o‘rinbosari
+								{% trans  "2018-2019yy. – Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash muhandislari insituti elektrotexnika va mexatronika kafedrasi assistenti va qishloq va suv xo‘jalig energiya ta'minoti fakul'teti dekan o‘rinbosari" %}
 								<br>
-								2019 yy – h.v. – Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash muhandislari instituti elektrotexnika va mexatronika kafedrasi assistenti</p>
+								{% trans  "2019 yy – h.v. – Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash muhandislari instituti elektrotexnika va mexatronika kafedrasi assistenti" %}</p>
         				</div>
         			</div>
         			<div class="col-lg-6">
         				<div class="tools_expert">
         					<div class="skill_main">
 								<div class="skill_item">
-									<h4>Toshkent irrigasiya va melioratsiya instituti talabasi <span class="counter">4</span> yil</h4>
+									<h4>{% trans  "Toshkent irrigasiya va melioratsiya instituti talabasi" %} <span class="counter">4</span>{% trans "yil" %}</h4>
 									<div class="progress_br">
 										<div class="progress">
 											<div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
@@ -152,7 +173,7 @@
 									</div>
 								</div>
 								<div class="skill_item">
-									<h4>Toshkent irrigasiya va melioratsiya instituti magistranti <span class="counter">2</span> yil</h4>
+									<h4>{% trans  "Toshkent irrigasiya va melioratsiya instituti magistranti " %}<span class="counter">2</span>{% trans " yil" %}</h4>
 									<div class="progress_br">
 										<div class="progress">
 											<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
@@ -160,7 +181,7 @@
 									</div>
 								</div>
 								<div class="skill_item">
-									<h4> Toshkent irrigasiya va melioratsiya instituti chizma geometriya va muhandislik grafikasi kafedrasi kabinet mudiri <span class="counter">1</span> yil</h4>
+									<h4>{% trans  "Toshkent irrigasiya va melioratsiya instituti chizma geometriya va muhandislik grafikasi kafedrasi kabinet mudiri" %}</h4>
 									<div class="progress_br">
 										<div class="progress">
 											<div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -168,7 +189,7 @@
 									</div>
 								</div>
 								<div class="skill_item">
-									<h4>Toshkent irrigasiya va melioratsiya instituti elektrotekxnika va elektr yuritma kafedrasi assistent <span class="counter">3</span> yil</h4>
+								<h4>{% trans "Toshkent irrigasiya va melioratsiya instituti elektrotekxnika va elektr yuritma kafedrasi assistent " %}<span class="counter">3</span>{% trans "yil" %}</h4>
 									<div class="progress_br">
 										<div class="progress">
 											<div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -176,7 +197,7 @@
 									</div>
 								</div>
 								<div class="skill_item">
-									<h4> Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash muhandislari insituti elektrotexnika va mexatronika kafedrasi assistenti va qishloq va suv xo‘jalig energiya ta'minoti fakul'teti dekan o‘rinbosari <span class="counter">1</span> yil</h4>
+									<h4> {% trans "Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash muhandislari insituti elektrotexnika va mexatronika kafedrasi assistenti va qishloq va suv xo‘jalig energiya ta'minoti fakul'teti dekan o‘rinbosari" %} <span class="counter">1</span>{% trans "yil" %}</h4>
 									<div class="progress_br">
 										<div class="progress">
 											<div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -190,17 +211,18 @@
         	</div>
         </section>
         <!--================End Welcome Area =================-->
-        
+
+
         <!--================My Tabs Area =================-->
         <section class="mytabs_area p_120">
         	<div class="container">
         		<div class="tabs_inner">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">MENING TAJRIBAM</a>
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">{% trans "MENING TAJRIBAM" %}</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">MENING TA'LIMIM</a>
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">{% trans "MENING TA'LIMIM" %}</a>
 						</li>
 					</ul>
 					<div class="tab-content" id="myTabContent">
@@ -210,11 +232,11 @@
 									<span></span>
 									<div class="media">
 										<div class="d-flex">
-											<p>2014 - 2015 yil orasida</p>
+											<p>{% trans "2014 - 2015 yil orasida" %}</p>
 										</div>
 										<div class="media-body">
-											<h4>kafedra mudiri</h4>
-											<p>Geometriya va muhandislik <br />grafikasi kafedrasi</p>
+											<h4>{% trans "kafedra mudiri" %}</h4>
+											<p>{% trans "Geometriya va muhandislik" %}<br />{% trans "grafikasi kafedrasi" %}</p>
 										</div>
 									</div>
 								</li>
@@ -222,11 +244,11 @@
 									<span></span>
 									<div class="media">
 										<div class="d-flex">
-											<p>2015 - 2017 yil orasida</p>
+											<p>{% trans "2015 - 2017 yil orasida" %}</p>
 										</div>
 										<div class="media-body">
-											<h4>kafedra assistent</h4>
-											<p>Elektrotekxnika va elektr <br /> yuritma kafedrasi</p>
+											<h4>{% trans "kafedra assistent" %}</h4>
+											<p>{% trans "Elektrotekxnika va elektr " %}<br /> {% trans "yuritma kafedrasi" %}</p>
 										</div>
 									</div>
 								</li>
@@ -234,11 +256,11 @@
 								<span></span>
 									<div class="media">
 										<div class="d-flex">
-											<p>2018-2019 yillar orasida</p>
+											<p>{% trans "2018-2019 yillar orasida" %}</p>
 										</div>
 										<div class="media-body">
-											<h4>fakultet dekan o‘rinbosari</h4>
-											<p>Qishloq va suv xo‘jalig energiya  <br />ta'minoti fakul'teti</p>
+											<h4>{% trans "fakultet dekan o‘rinbosari" %}</h4>
+											<p>{% trans "Qishloq va suv xo‘jalig energiya" %}<br />{% trans "ta'minoti fakul'teti" %}</p>
 										</div>
 									</div>
 								</li>
@@ -250,11 +272,11 @@
 									<span></span>
 									<div class="media">
 										<div class="d-flex">
-											<p>2007 - 2011 yil orasida</p>
+											<p>{% trans "2007 - 2011 yil orasida" %}</p>
 										</div>
 										<div class="media-body">
-											<h4>talaba</h4>
-											<p>Toshkent irrigasiya va melioratsiya <br />instituti talabasi</p>
+											<h4>{% trans "talaba " %}</h4>
+											<p>{% trans "Toshkent irrigasiya va melioratsiya  "%}<br />{% trans "instituti talabasi  "%}</p>
 										</div>
 									</div>
 								</li>
@@ -262,11 +284,11 @@
 									<span></span>
 									<div class="media">
 										<div class="d-flex">
-											<p>2012-2014 yil orasida</p>
+											<p>{% trans "2012-2014 yil orasida  "%}</p>
 										</div>
 										<div class="media-body">
-											<h4>MAGISTRANT</h4>
-											<p>Toshkent irrigasiya va melioratsiya <br />instituti magistranti</p>
+											<h4>{% trans "MAGISTRANT" %}</h4>
+											<p>{% trans "Toshkent irrigasiya va melioratsiya   "%}<br />{% trans "instituti magistranti  "%}</p>
 										</div>
 									</div>
 								</li>
@@ -276,189 +298,28 @@
         		</div>
         	</div>
         </section>
-        <!--================End My Tabs Area =================-->
-        
-<!--        &lt;!&ndash;================Feature Area =================&ndash;&gt;-->
-<!--        <section class="feature_area p_120">-->
-<!--        	<div class="container">-->
-<!--        		<div class="main_title">-->
-<!--        			<h2>offerings to my clients</h2>-->
-<!--        			<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>-->
-<!--        		</div>-->
-<!--        		<div class="feature_inner row">-->
-<!--        			<div class="col-lg-4 col-md-6">-->
-<!--        				<div class="feature_item">-->
-<!--        					<i class="flaticon-city"></i>-->
-<!--        					<h4>Architecture</h4>-->
-<!--        					<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $17 each.</p>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        			<div class="col-lg-4 col-md-6">-->
-<!--        				<div class="feature_item">-->
-<!--        					<i class="flaticon-skyline"></i>-->
-<!--        					<h4>Interior Design</h4>-->
-<!--        					<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $17 each.</p>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        			<div class="col-lg-4 col-md-6">-->
-<!--        				<div class="feature_item">-->
-<!--        					<i class="flaticon-sketch"></i>-->
-<!--        					<h4>Concept Design</h4>-->
-<!--        					<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $17 each.</p>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        		</div>-->
-<!--        	</div>-->
-<!--        </section>-->
-<!--        &lt;!&ndash;================End Feature Area =================&ndash;&gt;-->
-<!--        -->
-<!--        &lt;!&ndash;================Home Gallery Area =================&ndash;&gt;-->
-<!--        <section class="home_gallery_area p_120">-->
-<!--        	<div class="container">-->
-<!--        		<div class="main_title">-->
-<!--        			<h2>Our Latest Featured Projects</h2>-->
-<!--        			<p>Who are in extremely love with eco friendly system.</p>-->
-<!--        		</div>-->
-<!--        		<div class="isotope_fillter">-->
-<!--        			<ul class="gallery_filter list">-->
-<!--						<li class="active" data-filter="*"><a href="#">All</a></li>-->
-<!--						<li data-filter=".brand"><a href="#">Vector</a></li>-->
-<!--						<li data-filter=".manipul"><a href="#">Raster</a></li>-->
-<!--						<li data-filter=".creative"><a href="#">UI/UX</a></li>-->
-<!--						<li data-filter=".design"><a href="#">Printing</a></li>-->
-<!--					</ul>-->
-<!--        		</div>-->
-<!--        	</div>-->
-<!--        	<div class="container">-->
-<!--        		<div class="gallery_f_inner row imageGallery1">-->
-<!--        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design print">-->
-<!--        				<div class="h_gallery_item">-->
-<!--        					<div class="g_img_item">-->
-<!--        						<img class="img-fluid" src="img/gallery/project-1.jpg" alt="">-->
-<!--        						<a class="light" href="img/gallery/project-1.jpg"><img src="img/gallery/icon.png" alt=""></a>-->
-<!--        					</div>-->
-<!--        					<div class="g_item_text">-->
-<!--        						<h4>3D Helmet Design</h4>-->
-<!--        						<p>Client Project</p>-->
-<!--        					</div>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul creative">-->
-<!--        				<div class="h_gallery_item">-->
-<!--        					<div class="g_img_item">-->
-<!--        						<img class="img-fluid" src="img/gallery/project-2.jpg" alt="">-->
-<!--        						<a class="light" href="img/gallery/project-2.jpg"><img src="img/gallery/icon.png" alt=""></a>-->
-<!--        					</div>-->
-<!--        					<div class="g_item_text">-->
-<!--        						<h4>2D Vinyl Design</h4>-->
-<!--        						<p>Client Project</p>-->
-<!--        					</div>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        			<div class="col-lg-4 col-md-4 col-sm-6 manipul creative design print">-->
-<!--        				<div class="h_gallery_item">-->
-<!--        					<div class="g_img_item">-->
-<!--        						<img class="img-fluid" src="img/gallery/project-3.jpg" alt="">-->
-<!--        						<a class="light" href="img/gallery/project-3.jpg"><img src="img/gallery/icon.png" alt=""></a>-->
-<!--        					</div>-->
-<!--        					<div class="g_item_text">-->
-<!--        						<h4>Creative Poster Design</h4>-->
-<!--        						<p>Client Project</p>-->
-<!--        					</div>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative print">-->
-<!--        				<div class="h_gallery_item">-->
-<!--        					<div class="g_img_item">-->
-<!--        						<img class="img-fluid" src="img/gallery/project-4.jpg" alt="">-->
-<!--        						<a class="light" href="img/gallery/project-4.jpg"><img src="img/gallery/icon.png" alt=""></a>-->
-<!--        					</div>-->
-<!--        					<div class="g_item_text">-->
-<!--        						<h4>Embosed Logo Design</h4>-->
-<!--        						<p>Client Project</p>-->
-<!--        					</div>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design">-->
-<!--        				<div class="h_gallery_item">-->
-<!--        					<div class="g_img_item">-->
-<!--        						<img class="img-fluid" src="img/gallery/project-5.jpg" alt="">-->
-<!--        						<a class="light" href="img/gallery/project-5.jpg"><img src="img/gallery/icon.png" alt=""></a>-->
-<!--        					</div>-->
-<!--        					<div class="g_item_text">-->
-<!--        						<h4>3D Disposable Bottle</h4>-->
-<!--        						<p>Client Project</p>-->
-<!--        					</div>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative">-->
-<!--        				<div class="h_gallery_item">-->
-<!--        					<div class="g_img_item">-->
-<!--        						<img class="img-fluid" src="img/gallery/project-6.jpg" alt="">-->
-<!--        						<a class="light" href="img/gallery/project-6.jpg"><img src="img/gallery/icon.png" alt=""></a>-->
-<!--        					</div>-->
-<!--        					<div class="g_item_text">-->
-<!--        						<h4>3D Logo Design</h4>-->
-<!--        						<p>Client Project</p>-->
-<!--        					</div>-->
-<!--        				</div>-->
-<!--        			</div>-->
-<!--        		</div>-->
-<!--        		<div class="more_btn">-->
-<!--        			<a class="main_btn" href="#">Load More Items</a>-->
-<!--        		</div>-->
-<!--        	</div>-->
-<!--        </section>-->
-<!--        &lt;!&ndash;================End Home Gallery Area =================&ndash;&gt;-->
-<!--        -->
-<!--        &lt;!&ndash;================Testimonials Area =================&ndash;&gt;-->
-<!--        <section class="testimonials_area p_120">-->
-<!--        	<div class="container">-->
-<!--        		<div class="main_title">-->
-<!--        			<h2>Testimonials</h2>-->
-<!--        			<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>-->
-<!--        		</div>-->
-<!--        		<div class="testi_inner">-->
-<!--					<div class="testi_slider owl-carousel">-->
-<!--						<div class="item">-->
-<!--							<div class="testi_item">-->
-<!--								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>-->
-<!--								<h4>Fanny Spencer</h4>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star-half-o"></i></a>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div class="item">-->
-<!--							<div class="testi_item">-->
-<!--								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>-->
-<!--								<h4>Fanny Spencer</h4>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star-half-o"></i></a>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--						<div class="item">-->
-<!--							<div class="testi_item">-->
-<!--								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>-->
-<!--								<h4>Fanny Spencer</h4>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star"></i></a>-->
-<!--								<a href="#"><i class="fa fa-star-half-o"></i></a>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--        		</div>-->
-<!--        	</div>-->
-<!--        </section>-->
         <!--================End Testimonials Area =================-->
-        
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" height="600" src="{% static 'my_app/img/photo_2021-11-26_21-55-49.jpg' %}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" height="600" src="{% static 'my_app/img/photo_2021-11-26_21-55-49.jpg' %}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100"  height="600" src="{% static 'my_app/img/photo_2021-11-26_21-55-49.jpg' %}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
         <!--================Footer Area =================-->
         <footer class="footer_area p_120">
         	<div class="container">
@@ -466,25 +327,25 @@
         			<div class="col-lg-5 col-sm-6">
         				<aside class="f_widget ab_widget">
         					<div class="f_title">
-        						<h3>MEN HAQIMDA</h3>
+        						<h3>{% trans "MEN HAQIMDA  "%}</h3>
         					</div>
-        					<p>Dunyoni yaxshlik sari ozgartrib...</p>
+        					<p>{% trans "Dunyoni yaxshlik sari ozgartrib..." %}</p>
         					<p><!-- Link back to Colorlib an't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Barcha huquqlar himoya qilingan | Bu sayt <a href="https://t.me/fatkhullaev_b">FATKHULLAEV_B</a> tomanidan qilindi
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> {% trans "Barcha huquqlar himoya qilingan | Bu sayt" %} <a href="https://t.me/fatkhullaev_b">FATKHULLAEV_B</a>{% trans " tomanidan qilindi" %}
         				</aside>
         			</div>
         			<div class="col-lg-5 col-sm-6">
         				<aside class="f_widget news_widget">
         					<div class="f_title">
-        						<h3>TAKLIFLAR UCHUN </h3>
+        						<h3>{% trans "TAKLIFLAR UCHUN" %} </h3>
         					</div>
-        					<p>emailingizni qoldiring</p>
+        					<p>{% trans "emailingizni qoldiring" %}</p>
         					<div id="mc_embed_signup">
                                 <form target="_blank" action="" method="get" class="subscribe_form relative">
                                 	<div class="input-group d-flex flex-row">
                                         <input name="EMAIL" placeholder="Email adresingizni kiriting" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>		
-                                    </div>				
+                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
+                                    </div>
                                     <div class="mt-10 info"></div>
                                 </form>
                             </div>
@@ -493,9 +354,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Barch
         			<div class="col-lg-2">
         				<aside class="f_widget social_widget">
         					<div class="f_title">
-        						<h3>Meni kuztib boring</h3>
+        						<h3>{% trans "Meni kuztib boring" %}</h3>
         					</div>
-        					<p>men internetda</p>
+        					<p>{% trans "men internetda" %}</p>
         					<ul class="list">
         						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
         						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -508,11 +369,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Barch
         	</div>
         </footer>
         <!--================End Footer Area =================-->
-        
-        
-        
 
-        
+
+
+
+
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js' %}, then Bootstrap JS -->
         <script src="{% static 'my_app/js/jquery-3.3.1.min.js' %}"></script>

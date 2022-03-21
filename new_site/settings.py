@@ -23,42 +23,42 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-v91tyqp_bf#cxywmxr5ze32@%@$r=rvo@+_3m%raznye*eyk7n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-DEBUG_PROPAGATE_EXCEPTIONS = True
-LOGGING = {
-   'version': 1,
-   'disable_existing_loggers': False,
-   'formatters': {
-      'verbose': {
-         'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
-            'pathname=%(pathname)s lineno=%(lineno)s ' +
-            'funcname=%(funcName)s %(message)s'),
-         'datefmt': '%Y-%m-%d %H:%M:%S'
-      },
-      'simple': {
-         'format': '%(levelname)s %(message)s'
-      }
-   },
-   'handlers': {
-      'null': {
-         'level': 'DEBUG',
-         'class': 'logging.NullHandler',
-      },
-      'console': {
-         'level': 'DEBUG',
-         'class': 'logging.StreamHandler',
-         'formatter': 'verbose'
-      }
-   },
-   'loggers': {
-      'testlogger': {
-         'handlers': ['console'],
-         'level': 'INFO',
-      }
-   }
-}
+DEBUG = False
+# DEBUG_PROPAGATE_EXCEPTIONS = True
+# LOGGING = {
+#    'version': 1,
+#    'disable_existing_loggers': False,
+#    'formatters': {
+#       'verbose': {
+#          'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
+#             'pathname=%(pathname)s lineno=%(lineno)s ' +
+#             'funcname=%(funcName)s %(message)s'),
+#          'datefmt': '%Y-%m-%d %H:%M:%S'
+#       },
+#       'simple': {
+#          'format': '%(levelname)s %(message)s'
+#       }
+#    },
+#    'handlers': {
+#       'null': {
+#          'level': 'DEBUG',
+#          'class': 'logging.NullHandler',
+#       },
+#       'console': {
+#          'level': 'DEBUG',
+#          'class': 'logging.StreamHandler',
+#          'formatter': 'verbose'
+#       }
+#    },
+#    'loggers': {
+#       'testlogger': {
+#          'handlers': ['console'],
+#          'level': 'INFO',
+#       }
+#    }
+# }
 
-ALLOWED_HOSTS = ['127.0.0.1', 'nazarovapp.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 
@@ -75,17 +75,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'hitcount',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'new_site.urls'
@@ -142,7 +145,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'uz'
 
 TIME_ZONE = 'UTC'
 
@@ -150,6 +153,16 @@ USE_I18N = True
 
 USE_TZ = True
 
+LANGUAGES = (
+    ('ru', 'Russian'),
+    ('en', 'English'),
+    ('uz', 'Uzbek')
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/

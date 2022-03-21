@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-21 18:52+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\my_app\templates\my_app\index.html:36
+
+#| msgid ""
+#| "TOSHKENT IRRIGATSIYA VA QISHLOQ XO'JALIGINI MEXANIZATSIYALASH "
+#| "MUHANDISLARI INSTITUTI MILLIY TADQIQOT UNIVERSITETI"
+msgid ""
+"“ TOSHKENT IRRIGATSIYA VA QISHLOQ XO'JALIGINI MEXANIZATSIYALASH MUHANDISLARI "
+"INSTITUTI ” MILLIY TADQIQOT UNIVERSITETI"
+msgstr ""
+"TASHKENT IRRIGATION AND AGRICULTURAL MECHANIZATION ENGINEERS INSTITUTE "
+"NATIONAL RESEARCH UNIVERSITY"
+
+#: .\my_app\templates\my_app\index.html:71
+msgid "BOSH SAHIFA"
+msgstr "home page"
+
+#: .\my_app\templates\my_app\index.html:73
+msgid "FAN"
+msgstr "SUBJECT"
+
+#: .\my_app\templates\my_app\index.html:75
+msgid "MARUZA"
+msgstr "LECTURE"
+
+#: .\my_app\templates\my_app\index.html:76
+msgid "AMALIYOT"
+msgstr "PRACTICE"
+
+#: .\my_app\templates\my_app\index.html:77
+msgid "LABARATORIYA"
+msgstr "LABARATORY"
+
+#: .\my_app\templates\my_app\index.html:78
+msgid "mustaqil talim"
+msgstr "independent education"
+
+#: .\my_app\templates\my_app\index.html:83
+msgid "ilmiy ishlar"
+msgstr "scientific works"
+
+#: .\my_app\templates\my_app\index.html:85
+msgid "scopus"
+msgstr "scopus"
+
+#: .\my_app\templates\my_app\index.html:86
+msgid "oak"
+msgstr "oak"
+
+#: .\my_app\templates\my_app\index.html:87
+msgid "konferensiya"
+msgstr "conferance"
+
+#: .\my_app\templates\my_app\index.html:91
+msgid "SHAXSIY MA'LUMPTLARIM"
+msgstr "PERSONAL INFORMATION"
+
+#: .\my_app\templates\my_app\index.html:92
+msgid "OBYEKTIVKA"
+msgstr "OBJECTIVE"
+
+#: .\my_app\templates\my_app\index.html:93
+msgid "ILMIY ISHLARIM"
+msgstr "scientific works"
+
+#: .\my_app\templates\my_app\index.html:94
+msgid "DIPLOMLARIM"
+msgstr "diplomas"
+
+#: .\my_app\templates\my_app\index.html:97
+msgid "MENING ISH GRAFIGIM"
+msgstr "MY WORK GRAPHIC"
+
+#: .\my_app\templates\my_app\index.html:117
+msgid "ABDIRASULOVICH"
+msgstr "ABDIRASULOVICH"
+
+#: .\my_app\templates\my_app\index.html:118
+msgid "OYBEK NAZAROV"
+msgstr "OYBEK NAZAROV"
+
+#: .\my_app\templates\my_app\index.html:124
+msgid "Qashqadaryo viloyati, Qamashi tumani"
+msgstr "Kashkadarya region, Kamashi district"
+
+#: .\my_app\templates\my_app\index.html:146
+
+#| msgid "MENING TA'LIMIM"
+msgid "MENING MEHNAT FAOLIYATIM"
+msgstr "MY EDUCATION"
+
+#: .\my_app\templates\my_app\index.html:147
+msgid "2007-2011 yy. – Toshkent irrigasiya va melioratsiya instituti talabasi"
+msgstr ""
+"2007-2011 yy. - Student of the Tashkent Institute of Irrigation and Land "
+"Reclamation"
+
+#: .\my_app\templates\my_app\index.html:149
+msgid ""
+"2012-2014 yy. – Toshkent irrigasiya va melioratsiya instituti magistranti"
+msgstr ""
+"2012-2014 yy. - Master of Tashkent Institute of Irrigation and Land "
+"Reclamation"
+
+#: .\my_app\templates\my_app\index.html:151
+msgid ""
+"2014-2015 yy. – Toshkent irrigasiya va melioratsiya instituti chizma "
+"geometriya va muhandislik grafikasi kafedrasi kabinet mudiri"
+msgstr ""
+"2014-2015 yy. - Tashkent Institute of Irrigation and Land Reclamation "
+"Cabinet Head of the Department of Geometry and Engineering Graphics"
+
+#: .\my_app\templates\my_app\index.html:153
+msgid ""
+"2015-2017 yy. – Toshkent irrigasiya va melioratsiya instituti "
+"elektrotekxnika va elektr yuritma kafedrasi assistent"
+msgstr ""
+"2015-2017 yy. - Tashkent Institute of Irrigation and Land Reclamation "
+"Assistant of the Department of Electrical Engineering and Electrical "
+"Engineering"
+
+#: .\my_app\templates\my_app\index.html:155
+msgid ""
+"2018-2019yy. – Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash "
+"muhandislari insituti elektrotexnika va mexatronika kafedrasi assistenti va "
+"qishloq va suv xo‘jalig energiya ta'minoti fakul'teti dekan o‘rinbosari"
+msgstr ""
+"2018-2019 - Tashkent Irrigation and Agricultural Mechanization Assistant of "
+"the Department of Electrical Engineering and Mechatronics of the Institute "
+"of Engineers and Deputy Dean of the Faculty of Agriculture and Water "
+"Resources"
+
+#: .\my_app\templates\my_app\index.html:157
+msgid ""
+"2019 yy – h.v. – Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash "
+"muhandislari instituti elektrotexnika va mexatronika kafedrasi assistenti"
+msgstr ""
+"2018-2019 - Tashkent Irrigation and Agricultural Mechanization Assistant of "
+"the Department of Electrical Engineering and Mechatronics of the Institute "
+"of Engineers and Deputy Dean of the Faculty of Agriculture and Water "
+"Resources"
+
+#: .\my_app\templates\my_app\index.html:164
+msgid "Toshkent irrigasiya va melioratsiya instituti talabasi"
+msgstr "Student of Tashkent Institute of Irrigation and Land Reclamation"
+
+#: .\my_app\templates\my_app\index.html:164
+#: .\my_app\templates\my_app\index.html:188
+#: .\my_app\templates\my_app\index.html:196
+#| msgid " yil"
+msgid "yil"
+msgstr "year"
+
+#: .\my_app\templates\my_app\index.html:172
+msgid "Toshkent irrigasiya va melioratsiya instituti magistranti "
+msgstr "Master of Tashkent Institute of Irrigation and Land Reclamation"
+
+#: .\my_app\templates\my_app\index.html:172
+msgid " yil"
+msgstr "year"
+
+#: .\my_app\templates\my_app\index.html:180
+msgid ""
+"Toshkent irrigasiya va melioratsiya instituti chizma geometriya va "
+"muhandislik grafikasi kafedrasi kabinet mudiri"
+msgstr ""
+"Tashkent Institute of Irrigation and Land Reclamation Cabinet Head of the "
+"Department of Engineering Graphics"
+
+#: .\my_app\templates\my_app\index.html:188
+msgid ""
+"Toshkent irrigasiya va melioratsiya instituti elektrotekxnika va elektr "
+"yuritma kafedrasi assistent "
+msgstr ""
+"Tashkent Institute of Irrigation and Land Reclamation Electrical Engineering "
+"and Electrical Engineering assistant"
+
+#: .\my_app\templates\my_app\index.html:196
+msgid ""
+"Toshkent irrigasiya va qishloq xo‘jaligini mexanizasiyalash muhandislari "
+"insituti elektrotexnika va mexatronika kafedrasi assistenti va qishloq va "
+"suv xo‘jalig energiya ta'minoti fakul'teti dekan o‘rinbosari"
+msgstr ""
+"Tashkent Irrigation and Agricultural Mechanization Engineers Assistant of "
+"the Department of Electrical Engineering and Mechatronics of the Institute "
+"and Rural and Deputy Dean of the Faculty of Water Energy Supply"
+
+#: .\my_app\templates\my_app\index.html:218
+msgid "MENING TAJRIBAM"
+msgstr "MY EXPERIENCE"
+
+#: .\my_app\templates\my_app\index.html:221
+msgid "MENING TA'LIMIM"
+msgstr "MY EDUCATION"
+
+#: .\my_app\templates\my_app\index.html:231
+msgid "2014 - 2015 yil orasida"
+msgstr "behind 2014 - 2015 years"
+
+#: .\my_app\templates\my_app\index.html:234
+msgid "kafedra mudiri"
+msgstr "director of cathedra"
+
+#: .\my_app\templates\my_app\index.html:235
+msgid "Geometriya va muhandislik"
+msgstr "geometry and engineering"
+
+#: .\my_app\templates\my_app\index.html:235
+msgid "grafikasi kafedrasi"
+msgstr "cafadry"
+
+#: .\my_app\templates\my_app\index.html:243
+msgid "2015 - 2017 yil orasida"
+msgstr "between 2015 - 2017 years"
+
+#: .\my_app\templates\my_app\index.html:246
+msgid "kafedra assistent"
+msgstr "kafedra assist"
+
+#: .\my_app\templates\my_app\index.html:247
+msgid "Elektrotekxnika va elektr "
+msgstr "Electrical Engineering and Electrical "
+
+#: .\my_app\templates\my_app\index.html:247
+msgid "yuritma kafedrasi"
+msgstr "engine cafedry"
+
+#: .\my_app\templates\my_app\index.html:255
+msgid "2018-2019 yillar orasida"
+msgstr "between 2018 - 2019 years"
+
+#: .\my_app\templates\my_app\index.html:258
+msgid "fakultet dekan o‘rinbosari"
+msgstr "vice dean of the faculty"
+
+#: .\my_app\templates\my_app\index.html:259
+#| msgid "Qishloq va suv xo‘jalig energiya  "
+msgid "Qishloq va suv xo‘jalig energiya"
+msgstr "Agriculture and hydropower"
+
+#: .\my_app\templates\my_app\index.html:259
+msgid "ta'minoti fakul'teti"
+msgstr "supply faculty"
+
+#: .\my_app\templates\my_app\index.html:271
+msgid "2007 - 2011 yil orasida"
+msgstr "between 2007 - 2011 years"
+
+#: .\my_app\templates\my_app\index.html:274
+#| msgid "talaba"
+msgid "talaba "
+msgstr "student"
+
+#: .\my_app\templates\my_app\index.html:275
+#| msgid "Toshkent irrigasiya va melioratsiya "
+msgid "Toshkent irrigasiya va melioratsiya  "
+msgstr "Tashkent Irrigation and Land Reclamation"
+
+#: .\my_app\templates\my_app\index.html:275
+#| msgid "instituti talabasi"
+msgid "instituti talabasi  "
+msgstr "student of university"
+
+#: .\my_app\templates\my_app\index.html:283
+#| msgid "2012-2014 yil orasida"
+msgid "2012-2014 yil orasida  "
+msgstr "between 2012 - 2014 years"
+
+#: .\my_app\templates\my_app\index.html:286
+msgid "MAGISTRANT"
+msgstr ""
+
+#: .\my_app\templates\my_app\index.html:287
+#| msgid "Toshkent irrigasiya va melioratsiya "
+msgid "Toshkent irrigasiya va melioratsiya   "
+msgstr "Tashkent Irrigation and Land Reclamation"
+
+#: .\my_app\templates\my_app\index.html:287
+
+#| msgid "instituti magistranti"
+msgid "instituti magistranti  "
+msgstr "master of university"
+
+#: .\my_app\templates\my_app\index.html:326
+
+#| msgid "MEN HAQIMDA"
+msgid "MEN HAQIMDA  "
+msgstr "ABOUT ME"
+
+#: .\my_app\templates\my_app\index.html:328
+msgid "Dunyoni yaxshlik sari ozgartrib..."
+msgstr "Changing the world for the better ..."
+
+#: .\my_app\templates\my_app\index.html:330
+msgid "Barcha huquqlar himoya qilingan | Bu sayt"
+msgstr "All rights reserved | This site"
+
+#: .\my_app\templates\my_app\index.html:330
+msgid " tomanidan qilindi"
+msgstr "was made by"
+
+#: .\my_app\templates\my_app\index.html:336
+msgid "TAKLIFLAR UCHUN"
+msgstr "FOR OFFERS"
+
+#: .\my_app\templates\my_app\index.html:338
+msgid "emailingizni qoldiring"
+msgstr "leave your email"
+
+#: .\my_app\templates\my_app\index.html:353
+msgid "Meni kuztib boring"
+msgstr "Follow me"
+
+#: .\my_app\templates\my_app\index.html:355
+msgid "men internetda"
+msgstr "i am on the internet"
+
+#~ msgid "Toshkent irrigasiya va melioratsiya"
+#~ msgstr "Tashkent Irrigation and Land Reclamation"
